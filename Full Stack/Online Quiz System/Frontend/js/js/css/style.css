@@ -1,0 +1,36 @@
+.quiz-container{
+    width:800px;
+    margin:40px auto;
+    background:white;
+    padding:30px;
+    border-radius:8px;
+    box-shadow:0 0 10px rgba(0,0,0,.2);
+}
+
+.quiz-container h3{
+    margin:20px 0;
+}
+
+.option{
+    display:block;
+    margin:12px 0;
+    padding:10px;
+    border:1px solid #ddd;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+.option input{
+    margin-right:10px;
+}
+
+#timer{
+    color:red;
+    font-size:24px;
+    font-weight:bold;
+}
+
+button{
+    padding:10px 20px;
+    margin-right:10px;
+}

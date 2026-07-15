@@ -1,0 +1,38 @@
+document.getElementById("submitBtn").onclick = submitQuiz;
+
+async function submitQuiz(){
+
+    clearInterval(timer);
+
+    const token = localStorage.getItem("token");
+
+    const response = await fetch(
+        `http://localhost:5000/api/quizzes/${quizId}/submit`,
+        {
+
+            method:"POST",
+
+            headers:{
+                "Content-Type":"application/json",
+                Authorization:"Bearer "+token
+            },
+
+            body:JSON.stringify({
+                answers
+            })
+
+        }
+    );
+
+    const result = await response.json();
+
+    localStorage.setItem(
+        "result",
+        JSON.stringify(result)
+    );
+
+    window.location="result.html";
+
+}
+
+loadQuiz();
